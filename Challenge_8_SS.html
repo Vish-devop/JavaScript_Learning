@@ -1,0 +1,87 @@
+<!--# Questions based on: DOM (Document Object Model) 
+1. Create a button named as 9a, and display the name of the button into console. 
+2. Continue with (1), create another button named as 9b, and using .js, change the text in the second button to 9b done.
+3. Create (two) button named as: heads and tails. 
+- When clicking on the heads display:<br />
+You chose: heads
+- When clicking on the tails display:<br />
+You chose: tails <br />
+(You need to display in a paragraph (< p >) tag)
+4. Create a text box and a sumbit button. When clicking 'Sumbit' button, display the text as: [You name is: Simon] in a < p > tag 
+(and this name you need to take the user's input).
+5. Modify (4)th qos in such a way that if you press "enter" in the < input >, it will also display the same message 
+on the page that you're displaying above in qos-4. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <input type="button" id="button1" value="9a">
+    <input type="button" id="button2" value="9b">
+    <input type="button" onclick="heading()" id="head" value="heads">
+    <input type="button" onclick="tail()" id="tail" value="tails">
+    <input type="text" id="text-field" placeholder="Enter your name" onkeydown="enter()">
+    <input type="button" onclick="submit()" id="submitId" value="Submit">
+    <p id="write-name"></p>
+
+    <script>
+        let displayButton1=document.getElementById("button1").value;
+        console.log(displayButton1);
+
+        let displayButton2=document.getElementById("button2").value;
+        console.log("Value of button2 initially is ",displayButton2);
+        document.getElementById("button2").value="9b done";
+        console.log("Value of button2 after updating via js is ",displayButton2);
+
+        function heading()
+        {
+            let headsButton=document.getElementById("head").value;
+            console.log("You chose: ",headsButton);
+            alert("You chose: Heads");
+        }
+
+        function tail()
+        {
+            let tailsButton=document.getElementById("tail").value;
+            console.log("You chose: ",tailsButton);
+            alert("You chose: Tails");
+        }
+
+        let textValue=document.querySelector("#text-field");
+        let paraWrite=document.querySelector("#write-name");
+        function submit(){
+            document.createElement("p");
+            paraWrite.innerHTML="Your name is " + textValue.value;
+                console.log("Your name is ", textValue.value);
+        }
+
+        function enter(){
+            if(event.key==='Enter')
+            {
+                document.createElement("p");
+                paraWrite.innerHTML="Your name is " + textValue.value;
+                console.log("Your name is ", textValue.value); 
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
+
+<!--
+## Challenge Exercise
+6. Create an Amazon Shipping Calculator. 
+> What is an Amazon Shipping Calculator? 
+>> There is an input box where you're only allowed to enter the numbers (no string).
+>>> If the number is greater than 8, add (+10) and display the answer '$18' <br />
+>>> And if the number is less or equal to 8, return/display the number as it is. '$8'.
+-->
+
+<!-- Check Challenge_8_AmazonShippingCalc.html-->
+

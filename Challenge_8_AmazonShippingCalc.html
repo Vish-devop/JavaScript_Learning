@@ -1,0 +1,45 @@
+<!--
+## Challenge Exercise
+6. Create an Amazon Shipping Calculator. 
+> What is an Amazon Shipping Calculator? 
+>> There is an input box where you're only allowed to enter the numbers (no string).
+>>> If the number is greater than 8, add (+10) and display the answer '$18' <br />
+>>> And if the number is less or equal to 8, return/display the number as it is. '$8'.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="text-field" onkeypress="amazonCalc()">
+    <p id="para"></p>
+    <script>
+        let textName=document.querySelector("#text-field");
+        let paragraphWrite=document.querySelector("#para");
+        let add10=10;
+        
+        function amazonCalc(){
+            let add8=parseInt(textName.value);
+            let total=add8+add10;
+            if(textName.value>8)
+            {
+                document.createElement("p");
+                paragraphWrite.innerHTML="Value is $"+total;
+                console.log("Total value is $",total)
+            }
+            else
+            {
+                document.createElement("p");
+                paragraphWrite.innerHTML="Value is $"+textName.value;
+                console.log("Total value is $",textName.value)
+            }
+        }
+
+
+    </script>
+</body>
+</html>
