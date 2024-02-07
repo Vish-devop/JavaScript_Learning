@@ -1,4 +1,4 @@
-# Challenge 9 - HTLM, CSS, JavaScript
+# Challenge 9 - HTML, CSS, JavaScript
 
 ![Exercises 10](https://user-images.githubusercontent.com/70604577/229875879-802764d3-8e21-4f7a-8981-367470faa772.png)
 ![Exercises 10 2-final](https://user-images.githubusercontent.com/70604577/229875870-02b45e2f-dd8e-46d3-b03e-5d02fdf45aab.png)
