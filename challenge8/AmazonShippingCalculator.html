@@ -1,0 +1,48 @@
+<!-- 
+    Used onkeydown() -> for doing the action when 'enter' is clicked inside input() box.
+    -> and these are called: events() 
+    
+    <> We can use String() -> for converting into Strings.
+                  Number() -> for converting innto Numbers/Int.
+                  
+    window() object -> illustrates browser -> means, everything inside browser is inside window()
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Shipping Calculator</title>
+</head>
+<body>
+    <p>Amazon Shipping Calculator <hr>
+        Order under $40 = +$10 Shipping. <br>
+        Order over $40 = FREE shipping.
+    </p>
+    <input type="numbers" class="intNumber" placeholder="Cost of order" onkeydown=" handleCostKeyDown(event);
+    ">
+    <button class="calculate" onclick="calculateBtn()">Calculator</button>
+    <p class="totalCost"></p>
+
+    <script>
+
+        
+        function handleCostKeyDown(event){
+            event.key
+            if (event.key=='Enter'){
+                calculateBtn()
+            }
+        }
+        function calculateBtn(){
+            const Numbers=document.querySelector('.intNumber')
+            let cost = parseInt(Numbers.value)
+            if (cost<40){
+                cost+=10
+            }
+            
+            document.querySelector('.totalCost').innerHTML=`$${cost}`;
+        }
+
+    </script>
+</body>
+</html>

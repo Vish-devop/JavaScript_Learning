@@ -1,0 +1,116 @@
+<!-- 
+    What I learnt in DOM chapter: 
+    1. DOM stands for "Document Object Model".
+    2. document -> is the built-in object provided by .js 
+        2.1. document.title() -> provides us the title() of the page. 
+        2.2. document.body() -> helps us in changing the elements present on the body of webpage. 
+        2.3. document.querySelector() -> let use get (any element) from the page and put it inside JavaScript. (This will only work with the first element on the page.)
+
+    3. Every html element has an .innerHTML property() 
+    4. For using eventListners use "onkeydown" in html and event.key() in .js
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+ </head>
+ <body>
+    <button class="button-9a">9a</button>
+    <button class="button-9b" onclick="NineB()">9b</button>
+    <hr>
+
+    <button class="heads" onclick="headBtn()">heads</button>
+    <button class="tails" onclick="tail()">tails</button>
+    <p class="display" id="9b"></p>
+    <hr>
+
+    <input type="text" class="userName" placeholder="Enter your Name">
+    <button class="username" onclick="enterName()" onkeydown="enterName()">Sumbit</button>
+    <p class="displayTxt2" id="9d"></p>
+    <hr>
+
+    <input type="text" class="nameBox", placeholder="Enter any txt" onkeydown="handleNameKeydown(event)">
+    <p class="nameBoxed"></p>
+    <script>
+
+        // 9.a.
+        const btn1=document.querySelector('.button-9a') 
+        console.log(btn1)
+
+        // 9.b.
+        function NineB(){
+            const btn2=document.querySelector('.button-9b')
+            console.log(btn2.innerHTML='9b done!')
+        }
+
+        // 9.c.
+        function headBtn(){
+            
+            const displayTxt=document.querySelector('.display')
+
+            displayTxt.innerHTML='You chossed: Head'
+            
+        }
+        function tail(){
+            
+            const displayTxt = document.querySelector('.display')
+
+            displayTxt.innerHTML='You Choose: Tail'
+        }
+
+        // 9.d.
+
+            // defining the elements.
+            const nameInput=document.querySelector('.userName')
+            const displayTxt=document.querySelector('.displayTxt2')
+            const sumbitBtn=document.querySelector('.username')
+
+            // Adding event listener for sumbit button click
+            sumbitBtn.addEventListener("click",function() {
+                if (event.key==='Enter'){
+                    enterName()
+                }
+                
+            })
+
+            // Adding the 'enter' click event listener for sumbit button. 
+            sumbitBtn.addEventListener("keydown",function(){
+                enterName()
+            })
+
+
+            function enterName(){
+                const enterName=nameInput.value.trim()
+                if (enterName){
+                    displayTxt.textContent=`Your name is: ${enterName}`
+                    nameInput.value=""
+                }        
+            }
+
+            // 9.h 
+           
+            function nameBox() {
+                const enteredText = document.querySelector(".nameBox"); 
+                const displayText = document.querySelector(".nameBoxed"); 
+                const enteredName = enteredText.value.trim();
+                if (enteredName) {
+                    displayText.textContent = `You have entered this text: ${enteredName}`;
+                    enteredText.value = "";
+                }
+            }
+
+        // Call the nameBox function when Enter is pressed in the nameBox input field
+            document.querySelector(".nameBox").addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    nameBox();
+                }
+        });
+
+    </script>
+ </body>
+ </html>
+
+ 
