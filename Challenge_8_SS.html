@@ -27,6 +27,7 @@ on the page that you're displaying above in qos-4.
     <input type="text" id="text-field" placeholder="Enter your name" onkeydown="enter()">
     <input type="button" onclick="submit()" id="submitId" value="Submit">
     <p id="write-name"></p>
+    
 
     <script>
         let displayButton1=document.getElementById("button1").value;
@@ -37,22 +38,22 @@ on the page that you're displaying above in qos-4.
         document.getElementById("button2").value="9b done";
         console.log("Value of button2 after updating via js is ",displayButton2);
 
+        let paraWrite=document.querySelector("#write-name");
         function heading()
         {
             let headsButton=document.getElementById("head").value;
-            console.log("You chose: ",headsButton);
-            alert("You chose: Heads");
+            console.log("You chose: ", headsButton);
+            paraWrite.innerHTML="You chose:"+headsButton;
         }
 
         function tail()
         {
             let tailsButton=document.getElementById("tail").value;
             console.log("You chose: ",tailsButton);
-            alert("You chose: Tails");
+            paraWrite.innerHTML="You chose:"+tailsButton;
         }
 
         let textValue=document.querySelector("#text-field");
-        let paraWrite=document.querySelector("#write-name");
         function submit(){
             document.createElement("p");
             paraWrite.innerHTML="Your name is " + textValue.value;
