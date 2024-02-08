@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+    <link rel="stylesheet" href="Challenge_9_SS.css">
+</head>
+<body>
+
+    <br><br>
+    <h3>Amazon button</h3>
+    <input type="button" class="add" id="amazon-button" value="Add to Cart">
+    <br><br>
+    <h3>Uber buttons</h3>
+    <input type="button" class="request" id="uber-button1" value="Request now">
+    <input type="button" class="schedule" id="uber-button2" value="Schedule for later">
+    </div><br><br>
+    <!-- <button" class="js-button" id="js">Test</button> -->
+    <input type="button" class="js-button" id="js" value="Test">
+    <input type="checkbox" class="is-toggled" id="gameId" value="Gaming" style="float: right;" onclick="toggle1()">
+
+    <script>
+        let check=document.querySelector("#js");
+        check.textContent=check.classList.contains("js-button") 
+        ? console.log("The classList contains js-button")
+        : console.log("The classList does not contain js-button")
+
+        function toggle1(){
+            var gameVar=document.getElementById("#gameId");
+            gameVar.classList.toggle("is-toggled");
+        }
+
+
+        
+
+    </script>
+</body>
+</html>
