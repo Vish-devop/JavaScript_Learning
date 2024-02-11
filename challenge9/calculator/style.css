@@ -2,7 +2,7 @@
     background-color: black;
 }
 
-.n1,.n2,.n3,.n4,.n5,.n6,.n7,.n8,.n9,.n0,.equal,.dot{
+.gray-button{
     color: white;
     border: none;
     border-radius: 150%;
@@ -17,7 +17,7 @@
     background-color: rgb(51,51,51);
 }
 
-.plus,.minus,.multiply,.divide,.clear{
+.yellow-button{
     color: white;
     border:none;
     border-radius: 150%;
