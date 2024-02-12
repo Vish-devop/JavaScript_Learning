@@ -1,0 +1,36 @@
+*{
+    background-color: black;
+}
+
+.display{
+    border: none;
+    color: white;
+    font-size: large;
+}
+
+.gray{
+    background-color:gray;
+    border: none;
+    border-radius: 200%;
+    padding: 25px 28px;
+    font-size:100%;
+    font-weight: bold;
+    margin-right: 10px;
+    margin: 8px 2px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.orange{
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 200%;
+    padding: 25px 28px;
+    font-size:100%;
+    font-weight: bold;
+    margin-right: 10px;
+    margin: 8px 2px;
+    cursor: pointer;
+}

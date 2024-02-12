@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Challenge_9_Calculator.css">
+</head>
+<body>
+    
+    <br>
+    <input type="text" class="display" id="result"></p>
+    <input type="button" class="gray" id="one" value="1" onclick="display('1')">
+    <input type="button" class="gray" id="two" value="2" onclick="display('2')">
+    <input type="button" class="gray" id="three" value="3" onclick="display('3')">
+    <input type="button" class="orange" id="add" value="+" onclick="display('+')"><br><br>
+    <input type="button" class="gray" id="4" value="4" onclick="display('4')">
+    <input type="button" class="gray" id="5" value="5" onclick="display('5')">
+    <input type="button" class="gray" id="6" value="6" onclick="display('6')">
+    <input type="button" class="orange" id="sub" value="-" onclick="display('-')"><br><br>
+    <input type="button" class="gray" id="7" value="7" onclick="display('7')">
+    <input type="button" class="gray" id="8" value="8" onclick="display('8')">
+    <input type="button" class="gray" id="9" value="9" onclick="display('9')">
+    <input type="button" class="orange" id="mul" value="*" onclick="display('*')"><br><br>
+    <input type="button" class="gray" id="zeroId" value="0" onclick="display('0')">
+    <input type="button" class="gray" id="point" value="." onclick="display('.')">
+    <input type="button" class="gray" id="equalId" value="=" onclick="calculate()">
+    <input type="button" class="orange" id="div" value="/" onclick="display('/')"><br><br>
+    <input type="button" class="gray" id="clear" value="Clear" onclick="clear()">
+    <script src="Challenge_9_Calculator.js"></script>
+    
+</body>
+</html>
