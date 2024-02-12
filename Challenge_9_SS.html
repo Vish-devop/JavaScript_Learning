@@ -10,30 +10,23 @@
 
     <br><br>
     <h3>Amazon button</h3>
-    <input type="button" class="add" id="amazon-button" value="Add to Cart">
+    <input type="button" class="add" id="amazon-button" value="Add to Cart" >
     <br><br>
     <h3>Uber buttons</h3>
     <input type="button" class="request" id="uber-button1" value="Request now">
     <input type="button" class="schedule" id="uber-button2" value="Schedule for later">
     </div><br><br>
     <!-- <button" class="js-button" id="js">Test</button> -->
-    <input type="button" class="js-button" id="js" value="Test">
-    <input type="checkbox" class="is-toggled" id="gameId" value="Gaming" style="float: right;" onclick="toggle1()">
+    <input type="button" class="js-button" id="js" value="Test"><br><br>
+    <input type="button" class="gamingClass" id="gameId" value="Gaming"  onclick="isToggled('gameId')">
+    <input type="button" class="musicClass" id="musicId" value="Music"  onclick="isToggled('musicId')">
+    <input type="button" class="techClass" id="techId" value="Tech"  onclick="isToggled('techId')">
+    <br><br><br>
+    <input type="number" id="amazonValue">
+    <button class="calculate"  onclick="errorMessage()">Calculate</button>
+    <p class="errorMessage" id="printErrorMessage"></p>
 
-    <script>
-        let check=document.querySelector("#js");
-        check.textContent=check.classList.contains("js-button") 
-        ? console.log("The classList contains js-button")
-        : console.log("The classList does not contain js-button")
+    <script src="Challenge_9_SS.js"></script>
 
-        function toggle1(){
-            var gameVar=document.getElementById("#gameId");
-            gameVar.classList.toggle("is-toggled");
-        }
-
-
-        
-
-    </script>
 </body>
 </html>
