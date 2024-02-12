@@ -7,8 +7,8 @@
 - Challenge 6 ✅
 - Challenge 7 ✅
 - Challenge 8 ✅
-- Challenge 9  (Challenger exercise is left - Calculator Application) 
-- Challenge 10 (Not done)
+- Challenge 9 ✅ 
+- Challenge 10 (In progress: done till 10.n.)
 - Challenge 11 (Not done)
 - Challenge 12 (Not done)
 - Challenge 13 (Not done)
