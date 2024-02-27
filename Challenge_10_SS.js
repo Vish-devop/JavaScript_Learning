@@ -175,23 +175,223 @@ console.log(tempMin, tempMax);
 //11.n
 function countWords(words)
 {
-    var temp=words[0];
-    for(var i=0;i<=words.length;i++)
+    var obj={};
+    for(let i=0; i<words.length; i++)
     {
-        //for(var j=0;j<=words.length;j++)
-        //{
-            temp[i]=words[i];
-            if(temp[i]!=words[i])
-            {
-                temp[i++]=words[i]
-            }
-            else
-            {
-                temp[i].count++;
-            }
-        //}
+        const num=words[i];
+    
+        if(!obj[num])
+        {
+            obj[num]=1;
+            console.log(obj, obj[num]);
+        }
+        else{
+            obj[num]++;
+            console.log("Increase count", obj, obj[num]);
+        }
+    }
+    return obj;
+}
+console.log(countWords(['apple','grape','apple','apple','banana']));
+
+//11.o & 11.p
+function searchWord(words){
+    var i=0;
+    while(i<=words.length)
+    {
+      var j;
+      if(words[i]=="search")
+      {
+        j=i;
+        //console.log("J",j);
+        return j;
+      }
+      else
+      {
+        j=-1;
+      }
+    
+    i++;
+    }
+    return j;
+    }
+    console.log("The word 'Search' is on the index number: ", searchWord(['hello','world', 'search','good','search']));
+    console.log("The word 'Search' is on the index number: ",searchWord(['not','found']));
+
+    //11.q
+function findIndex(words,word){
+    var i=0;
+    while(i<=words.length)
+    {
+      var j;
+      if(words[i]==word)
+      {
+        j=i;
+        //console.log("J",j);
+        return j;
+      }
+      else
+      {
+        j=-1;
+      }
+    
+    i++;
+    }
+    return j;
+    }
+    console.log("The word 'Red' is on the index number: ", findIndex(['green','red', 'blue','red'],"red"));
+    console.log("The word 'Yellow' is on the index number: ",findIndex(['green', 'red', 'blue', 'red'],'yellow'));
+
+//11.r
+function removeEgg(foods)
+{
+const result=[];
+//console.log(foods.length);
+//console.log(foods);
+
+for (var i=0;i<=foods.length;i++)
+{
+  if(foods[i]!='egg')
+  {
+    return foods;    
+  }
+  else
+  {
+      foods.splice(i,1);
+      i=0;
+  }
+}
+return foods;
+}
+console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+//11.s
+function removeEgg(foods)
+{
+const result=[];
+//console.log(foods.length);
+//console.log(foods);
+var count=0;
+for (var i=0;i<=foods.length;i++)
+{
+  if(foods[i]!='egg')
+  {
+    return foods;    
+  }
+  else
+  {
+      foods.splice(i,1);
+      console.log(foods);
+      i=0;
+      count++;
+      if(count==2)
+      {return foods;}
+      console.log(count);    
+  }
+}
+return foods;
+}
+console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+//11.t
+function removeEgg(foods)
+{
+const result=[];
+//console.log(foods.length);
+//console.log(foods);
+var count=0;
+foods.reverse(foods);
+console.log("Reversing", foods);
+for (var i=0;i<=foods.length;i++)
+{
+  if(foods[i]=='egg')
+  {
+      foods.splice(i,1);
+      console.log(foods);
+      i=0;
+      count++;
+      if(count==2)
+      {return foods.reverse(foods);}
+      console.log(count);    
+  }
+  else
+  {
+    console.log(foods);
+    i=0;   
+  }
+}
+return foods.reverse(foods);
+}
+console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+//11.u
+const foods=['egg', 'apple', 'egg', 'egg', 'ham'];
+function removeEgg(foods)
+{
+const result=[];
+var count=0;
+foods.reverse(foods);
+console.log("Reversing", foods);
+for (var i=0;i<=foods.length;i++)
+{
+  if(foods[i]=='egg')
+  {
+      foods.splice(i,1);
+      //console.log(foods);
+      i=0;
+      count++;
+      if(count==2)
+      {return foods.reverse(foods);}
+      //console.log(count);    
+  }
+  else
+  {
+    //console.log(foods);
+    i=0;   
+  }
+}
+return foods.reverse(foods);
+}
+
+foods.slice(foods);
+console.log(removeEgg(foods.slice()));
+console.log("Original",foods);
+
+//11.v
+for(var i=1;i<=20;i++)
+//console.log("i value",i);
+  {
+    if(i%3===0 && i%5===0)
+    {
+      var k="FizzBuzz";
+      console.log(k);
+    }
+    else if(i%3===0)
+    {
+      l="Fizz";
+      console.log(l);
+    }
+    else if(i%5===0)
+    {
+      var j="Buzz";
+      console.log(j);
+    } 
+    else
+    {
+      console.log(i);
     }
 }
-var words=['apple','apple', 'grape', 'apple'];
-countWords(words);
-console.log(countObject);
+
+ //11.w
+ function unique(words)
+ {
+  let unique=[];
+  words.forEach(element => {
+  if(!unique.includes(element))
+    unique.push(element);
+  });
+  return unique;
+}
+
+console.log("Array 1: ", unique(['green','red', 'blue','red']));
+console.log("Array 2: ",unique(['red', 'green', 'green', 'red']));
