@@ -17,6 +17,6 @@
 
 **Challenge 9:** Completed
 
-**Challenge 10:** Inprogress (Only ToDo is pending)
+**Challenge 10:** In progress (Only ToDo is pending)
 
-**Challenge 12:** Not started
+**Challenge 12:** In progress
